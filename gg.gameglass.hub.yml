@@ -85,6 +85,12 @@ modules:
         url: https://download.gameglass.gg/hub/GameGlass.deb
         sha256: 31c3dfee3ae6b4f489a0a467038a3ef1f3ee5dc8704dea6cbe54f98397afb9a4
         dest-filename: GameGlass.deb
+        x-checker-data:
+          type: json
+          url: https://download.gameglass.gg/hub/latest-linux.yml
+          version-query: .version
+          url-query: '"https://download.gameglass.gg/hub/" + (.files[] | select(.url | endswith(".deb")) | .url)'
+          is-main-source: true
       - type: file
         path: gameglass-hub.sh
       - type: file
