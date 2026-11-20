@@ -82,8 +82,8 @@ modules:
       - install -Dm644 usr/share/metainfo/gg.gameglass.hub.metainfo.xml /app/share/metainfo/gg.gameglass.hub.metainfo.xml
     sources:
       - type: file
-        url: https://download.gameglass.gg/hub/GameGlass.deb
-        sha256: 31c3dfee3ae6b4f489a0a467038a3ef1f3ee5dc8704dea6cbe54f98397afb9a4
+        url: https://download.gameglass.gg/hub/GameGlass.AppImage
+        sha256: 30f987ff4daf4a6918215fb713d88826694509ede277e69773b35998b879a2cf
         dest-filename: GameGlass.deb
         x-checker-data:
           type: electron-updater
