@@ -63,16 +63,15 @@ modules:
       - mkdir -p /app/gameglass-hub
       - cp -a "opt/GameGlass Hub/." /app/gameglass-hub/
       - rm -f /app/gameglass-hub/chrome-sandbox
-      - mv "/app/gameglass-hub/@gameglasshub" /app/gameglass-hub/gameglass-hub
 
       - install -Dm755 gameglass-hub.sh /app/bin/gameglass-hub
 
-      - install -Dm644 usr/share/applications/@gameglasshub.desktop /app/share/applications/gg.gameglass.hub.desktop
+      - install -Dm644 usr/share/applications/gameglass-hub.desktop /app/share/applications/gg.gameglass.hub.desktop
       - desktop-file-edit --set-key=Exec --set-value='gameglass-hub %U' --set-icon=gg.gameglass.hub /app/share/applications/gg.gameglass.hub.desktop
 
       - |
         for size in 16 32 48 64 128 256 512; do
-          install -Dm644 "usr/share/icons/hicolor/${size}x${size}/apps/@gameglasshub.png" \
+          install -Dm644 "usr/share/icons/hicolor/${size}x${size}/apps/gameglass-hub.png" \
             "/app/share/icons/hicolor/${size}x${size}/apps/gg.gameglass.hub.png"
         done
 
@@ -83,7 +82,7 @@ modules:
     sources:
       - type: file
         url: https://download.gameglass.gg/hub/GameGlass.deb
-        sha256: 31c3dfee3ae6b4f489a0a467038a3ef1f3ee5dc8704dea6cbe54f98397afb9a4
+        sha256: 568c38b0084b220edc7c0111c43a43c3f83284a7a166f201e95f5f697669e7ee
         dest-filename: GameGlass.deb
         x-checker-data:
           type: electron-updater
