@@ -63,7 +63,7 @@ modules:
       - mkdir -p /app/gameglass-hub
       - cp -a "opt/GameGlass Hub/." /app/gameglass-hub/
       - rm -f /app/gameglass-hub/chrome-sandbox
-      - mv "/app/gameglass-hub/@gameglasshub" /app/gameglass-hub/gameglass-hub
+      - mv "/app/gameglass-hub/gameglass-hub" /app/gameglass-hub/gameglass-hub
 
       - install -Dm755 gameglass-hub.sh /app/bin/gameglass-hub
 
